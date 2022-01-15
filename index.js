@@ -4,6 +4,9 @@ const app = express();
 const {PORT} = require("./lib/secret.js");
 
 const {sendSuccess} = require("./lib/helper")
+
+app.use("/api",require("./routes/routes"))
+
 app.get('/', (req, res)=> {
     sendSuccess(res,"Api is up and running!!")
 }) 
